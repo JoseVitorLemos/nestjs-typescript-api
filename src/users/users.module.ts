@@ -6,7 +6,7 @@ import { UserSchema } from './repository/users.schema'
 
 @Module({
   imports: [
-    MongooseModule.forRoot('mongodb://localhost:27017/nest-typescript'),
+    MongooseModule.forRoot('String de conexão mongodb'),
     MongooseModule.forFeature([{ name: 'Users', schema: UserSchema }]),
   ],
   controllers: [UsersController],

@@ -15,13 +15,11 @@ export class UsersController {
 
   @Get()
   async getUsers(): Promise<User[]> {
-    console.log('###### dentro da User.controller ######')
     return this.userService.getAll()
   }
 
   @Get(':id')
   async getUserById(@Param('id') id: string): Promise<User> {
-    console.log('dentro do getbyId controller')
     return this.userService.getOne(id)
   }
 
@@ -32,7 +30,6 @@ export class UsersController {
 
   @Put(':id')
   async updateUser(@Param('id') id: string, @Body() updateUserDto: UpdateUserDto): Promise<UpdateUserDto> {
-    console.log('###### Put userController ######')
     return this.userService.update(id, updateUserDto)
   }
 }
